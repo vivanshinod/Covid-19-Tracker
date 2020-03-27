@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_190sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        app:cardCornerRadius="@dimen/_20sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:weightSum="2"
+                android:id="@+id/llStatesIndia">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strAP"
+                    android:id="@+id/demoProvinceIndia"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvProvinceIndia"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@+id/demoProvinceIndia"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:id="@+id/llConfirmCaseIndia"
+                android:layout_below="@+id/llStatesIndia"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/strCCaseIndians"
+                    android:id="@+id/demoConfirmCaseIndians"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tvConfirmedCaseIndian"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llConfirmCaseIndia"
+                android:id="@+id/llConfirmCaseForeigners"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/strCCaseForeigners"
+                    android:layout_below="@id/demoConfirmCaseIndians"
+                    android:id="@+id/demoConfirmCaseForeigner"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvConfirmedCaseForeigners"
+                    android:layout_below="@id/tvConfirmedCaseIndian"
+                    android:layout_toEndOf="@+id/demoConfirmCaseForeigner"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llConfirmCaseForeigners"
+                android:id="@+id/llDischargedIndia"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strDischarged"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/demoDischarged"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/tvDischargedIndians"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llDischargedIndia"
+                android:id="@+id/llDeathIndia"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="@string/strDeath"
+                    android:id="@+id/demoDeaths"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tvDeaths"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+            <!-- Discharged -->
+
+            <!-- Deaths -->
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

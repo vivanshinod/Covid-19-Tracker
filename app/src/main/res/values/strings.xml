@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Covid19 Tracker</string>
+    <string name="app">Covid\'19 Tracker</string>
+    <string name="tvConfirmedCases">Confirmed\n\t\t\tCases</string>
+    <string name="tvTotalDeath">Total\n\tDeath</string>
+    <string name="tvTotalRecovered">Total\n\t Recovered</string>
+    <string name="tvTotalUpdated">Updated</string>
+    <string name="strAP">State:</string>
+    <string name="strCCaseIndians">Confirmed Cases Indian:</string>
+    <string name="strDischarged">Discharged</string>
+    <string name="strCCaseForeigners">Confirmed Cases Foreigners</string>
+    <string name="strDeath">Deaths</string>
+    <string name="indianProvince">Indian Province Data</string>
+    <string name="usaProvince">US Province Data</string>
+    <string name="action_search">Search</string>
+    <string name="search_hint">Type</string>
+</resources>

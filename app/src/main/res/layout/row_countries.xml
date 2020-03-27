@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_240sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:id="@+id/card1"
+        app:cardCornerRadius="@dimen/_20sdp">
+        <TextView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:fontFamily="@font/sourcecodepro_bold"
+            android:text="Italy"
+            android:id="@+id/tvCountryName"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@android:color/black"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:id="@+id/rl1">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:id="@+id/llCntryTotalCases"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowDemoCases"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:text="Total Cases:"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowTotalCases"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:id="@+id/llCntryTodayCases"
+                android:layout_below="@+id/llCntryTotalCases">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowDemoTodayCases"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:text="Today Cases:"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowTodayCases"
+                    android:layout_toEndOf="@id/tvRowDemoTodayCases"
+                    android:layout_below="@id/tvRowTotalCases"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llCntryTotalDeath"
+                android:layout_below="@+id/llCntryTodayCases"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowDemoTotalDeaths"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:text="Total Deaths:"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowTotalDeaths"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"/>
+
+            </LinearLayout>
+
+            <!-- TodayDeaths -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llCntryTodayDeath"
+                android:layout_below="@+id/llCntryTotalDeath"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowDemoTodayDeaths"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:text="Today Deaths:"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowTodayDeaths"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llCntryTodayDeath"
+                android:id="@+id/llCntryRecovered"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowDemoRecovered"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:text="Recovered:"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowRecovered"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"/>
+
+            </LinearLayout>
+
+            <!-- Recovered -->
+
+            <!-- Active -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llCntryActive"
+                android:layout_below="@+id/llCntryRecovered"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowDemoActive"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:text="Active:"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowActive"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"/>
+            </LinearLayout>
+
+            <!-- Critical Cases -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llCntryActive"
+                android:id="@+id/llCntryCritical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowDemoCritical"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:text="Critical:"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowCritical"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"/>
+            </LinearLayout>
+
+            <!-- casesPerOneMillion -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_below="@+id/llCntryCritical"
+                android:id="@+id/llCntryCPM">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowDemoCPM"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:text="Cases Per One Million:"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowCPM"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"/>
+            </LinearLayout>
+
+
+            <!-- deathsPerOneMillion -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llCntryCPM"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowDemoDPM"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcecodepro_it"
+                    android:text="Deaths Per One Million:"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRowDPM"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/sourcecodepro_it"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+   <!--     </LinearLayout>
+    </ScrollView>-->
+</LinearLayout>
